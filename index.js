@@ -11,13 +11,8 @@ axios(url)
         const $ = cheerio.load(html)
         $('.post__link', html).each(function() {
 
-            //const author = $(element).find('.gs_ri').text().replace(/\s\s+/g, '')
-            //const blogTitle = $(element).find('.crayons-story__title');
-            //const a = $(element).find('a').attr('href');
             const postTitle = $(this).attr('title');
             const link = $(this).attr('href');
-            //const joinedBlogLink = `${dev}` + `${blogLink}`;
-            //write(`Author: ${author}\n`);
             console.log(`News Title: ${postTitle}\nLink: ${link}\n\n`)
         });
 
